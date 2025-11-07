@@ -1,0 +1,140 @@
+.editor-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #404040;
+  background: #252526;
+  gap: 1rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-btn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #d4d4d4;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.settings-btn:hover {
+  background: #2d2d2d;
+  border-color: #667eea;
+  color: #fff;
+}
+
+.back-btn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #d4d4d4;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  margin-right: 1rem;
+}
+
+.back-btn:hover {
+  background: #2d2d2d;
+  border-color: #667eea;
+}
+
+.editor-header h1 {
+  flex: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.editor-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-indicator {
+  font-size: 14px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: #2d2d2d;
+}
+
+.status-indicator.connected {
+  color: #4caf50;
+}
+
+.status-indicator.disconnected {
+  color: #f44336;
+}
+
+.presence-indicators {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.presence-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2d2d2d;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: help;
+}
+
+.editor-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.editor-textarea {
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  outline: none;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: none;
+  overflow-y: auto;
+}
+
+.editor-textarea::placeholder {
+  color: #666;
+}
+
+.offline-indicator {
+  padding: 0.75rem 1.5rem;
+  background: #ff9800;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #404040;
+}
+

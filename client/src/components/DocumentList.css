@@ -1,0 +1,133 @@
+.document-list-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.document-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #404040;
+  background: #252526;
+}
+
+.document-list-header h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.username {
+  color: #d4d4d4;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: #5568d3;
+}
+
+.document-list-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.create-document-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.document-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  background: #2d2d2d;
+  color: #d4d4d4;
+  font-size: 16px;
+}
+
+.document-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.create-document-form button {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.create-document-form button:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.create-document-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.document-card {
+  background: #2d2d2d;
+  padding: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #404040;
+}
+
+.document-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #667eea;
+}
+
+.document-card h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+}
+
+.document-meta {
+  color: #888;
+  font-size: 14px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  padding: 3rem;
+  font-size: 18px;
+}
+

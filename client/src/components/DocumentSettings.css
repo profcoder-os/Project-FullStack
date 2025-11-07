@@ -1,0 +1,286 @@
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.settings-modal {
+  background: #2d2d2d;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #404040;
+}
+
+.settings-header h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #d4d4d4;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: #404040;
+}
+
+.settings-content {
+  padding: 1.5rem;
+}
+
+.settings-loading {
+  padding: 2rem;
+  text-align: center;
+  color: #d4d4d4;
+}
+
+.settings-section {
+  margin-bottom: 2rem;
+}
+
+.settings-section h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+
+.settings-section p {
+  color: #d4d4d4;
+  margin: 0.5rem 0;
+  font-size: 14px;
+}
+
+.settings-section strong {
+  color: #fff;
+}
+
+/* Share Search */
+.share-search {
+  position: relative;
+}
+
+.share-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.share-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.search-loading {
+  color: #888;
+  font-size: 12px;
+  padding: 0.5rem;
+}
+
+.search-results {
+  background: #1e1e1e;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+}
+
+.search-result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-bottom: 1px solid #404040;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.user-info strong {
+  color: #fff;
+  font-size: 14px;
+}
+
+.user-info span {
+  color: #888;
+  font-size: 12px;
+}
+
+.add-user-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-add {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.btn-add:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.btn-add:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.already-shared {
+  color: #4caf50;
+  font-size: 12px;
+}
+
+/* Access List */
+.access-list {
+  background: #1e1e1e;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.access-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #404040;
+}
+
+.access-item:last-child {
+  border-bottom: none;
+}
+
+.access-item.owner {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.access-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.role-select {
+  padding: 0.5rem;
+  background: #1e1e1e;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  color: #d4d4d4;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.role-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.role-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.role-badge.owner {
+  background: #667eea;
+  color: white;
+}
+
+.role-badge.editor {
+  background: #4caf50;
+  color: white;
+}
+
+.role-badge.viewer {
+  background: #888;
+  color: white;
+}
+
+.btn-remove {
+  padding: 0.5rem 1rem;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.btn-remove:hover {
+  background: #d32f2f;
+}
+
+/* Danger Zone */
+.danger-zone {
+  border-top: 2px solid #f44336;
+  padding-top: 1.5rem;
+}
+
+.btn-delete {
+  padding: 0.75rem 1.5rem;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-delete:hover {
+  background: #d32f2f;
+}
+
